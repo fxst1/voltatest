@@ -1,0 +1,17 @@
+[package]
+name = "voltaalert-clock"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+clap = { version = "4.6.1", features = ["derive"] }
+tokio = { version = "1.52.1", features = ["full"] }
+zeromq = "0.5.0"
+chrono = { version = "0.4.44", features = ["serde"]}
+rusqlite = { version = "0.39.0", features = ["chrono"]}
+async-trait = { version = "*" }
+serde = { version = "*", features = ["derive"] }
+serde_json = { version = "*" }
+log = "*"
+timer = { version = "0.2.0" }
+voltaalert-core = { path = "../core" }
