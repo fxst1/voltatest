@@ -100,7 +100,12 @@ The setup consist of:
 
 ## Getting started
 
-**Prerequisites:** Rust, Node.js, ZeroMQ system library
+**Prerequisites:** Rust, Node.js
+
+```bash
+# In a separate terminal — start the ZMQ publisher
+cargo run --bin voltaalert-clock --
+```
 
 ```bash
 # Frontend + Tauri dev mode
@@ -109,12 +114,12 @@ npm install
 npm run tauri dev
 ```
 
-```bash
-# In a separate terminal — start the ZMQ publisher
-cargo run -p voltaalert-clock
-```
-
-Note: The app connects to `tcp://127.0.0.1:9000`
+Notes:
+- The app connects to `tcp://127.0.0.1:9000`
+- Sqlite DB is located at voltaalert/src-tauri/volta.db
+- There is a demo.db that's contains few exemple of alarms and alerts.
+- The first time you run this app, volta.db will be created, no default alarms / alerts going to be generated
+- Use the frontend to manage datas
 
 ## Data flow
 

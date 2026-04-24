@@ -1,6 +1,6 @@
 # Sqlite DB
 *.db
-!default.db
+!demo.db
 
 # Rust
 target
