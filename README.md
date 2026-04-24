@@ -129,3 +129,14 @@ Notes:
 4. A background task reads the channel and calls `app_handle.emit("alert", alert_data)`
 5. The React frontend receives the alert via `listen("alert", ...)`
 6. Enjoy
+
+
+## TODO
+- Timeseries (alert charts per minute in real time)
+- Handle socket disconnection (client socket still trying to read incoming -> timeout ?)
+- Versionning / migrations on SQLite : change AlarmDescriptor / Alert may broke the whole process, results in a dataloss
+- ZMQ configuration based on env / main args
+- Alert feedback (call some extra stuff; sound - Notification)
+- Better logging (log in file)
+- Abstract zmq (signaling)
+- Adding other kind of Alarm
